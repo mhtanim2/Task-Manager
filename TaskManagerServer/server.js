@@ -26,8 +26,8 @@ app.use(mongoSanitize());
 app.use(xss());
 app.use(hpp());
 
-app.use(express.json({limit: '50mb'}));
-app.use(express.urlencoded({extended: true}));
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ extended: true }));
 
 // Body Parser Implement
 app.use(express.json());
@@ -59,8 +59,8 @@ port = process.env.PORT || 4000;
 
 mongoose
     .connect(URI, {
-        user: "mhtanim1234",
-        pass: "mhtanim1234",
+        user: process.env.USER,
+        pass: process.env.PASS,
         autoIndex: true,
         useNewUrlParser: true,
         useUnifiedTopology: true,
