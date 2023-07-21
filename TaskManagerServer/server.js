@@ -2,7 +2,7 @@ const express = require('express');
 const app = new express();
 const dotenv = require("dotenv");
 const path = require('path');
-dotenv.config({ path: "./config.env" });
+dotenv.config();
 //read directory for routers
 const { readdirSync } = require("fs");
 // Security Middleware Lib Import
